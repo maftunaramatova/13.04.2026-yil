@@ -36,3 +36,14 @@ with sql.connect("baza.db") as con:
                 VALUES (4, 1, 'Noutbuk', 6500000)""")
     
     con.commit()
+    
+    print(f"Students tablesidagi foydalanuvchilar haqida ma'lumot:")
+    cur.execute("SELECT * FROM students")
+    for row in cur.fetchall():
+        print(row)
+    
+    print(f"Xaridlar tablesidagi foydalanuvchilar haqida ma'lumot:")
+    cur.execute("SELECT * FROM xaridlar")
+    for row in cur.fetchall():
+        print(row)
+    
